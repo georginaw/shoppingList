@@ -2,6 +2,4 @@
 /logs/*
 !/logs/README.md
 .idea
-.idea/workspace.xml
-.idea/
-idea/workspace.xml
+
