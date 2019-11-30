@@ -6,8 +6,8 @@
 # https://github.com/sequelpro/sequelpro
 #
 # Host: 127.0.0.1 (MySQL 5.7.27)
-# Database: shoppingList
-# Generation Time: 2019-11-30 15:33:32 +0000
+# Database: shopping_list
+# Generation Time: 2019-11-30 18:36:24 +0000
 # ************************************************************
 
 
@@ -20,21 +20,21 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 
-# Dump of table shoppingList
+# Dump of table shopping_list
 # ------------------------------------------------------------
 
-DROP TABLE IF EXISTS `shoppingList`;
+DROP TABLE IF EXISTS `shopping_list`;
 
-CREATE TABLE `shoppingList` (
+CREATE TABLE `shopping_list` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `item` varchar(50) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-LOCK TABLES `shoppingList` WRITE;
-/*!40000 ALTER TABLE `shoppingList` DISABLE KEYS */;
+LOCK TABLES `shopping_list` WRITE;
+/*!40000 ALTER TABLE `shopping_list` DISABLE KEYS */;
 
-INSERT INTO `shoppingList` (`id`, `item`)
+INSERT INTO `shopping_list` (`id`, `item`)
 VALUES
 	(1,'milk'),
 	(2,'apples'),
@@ -42,7 +42,7 @@ VALUES
 	(4,'bread'),
 	(5,'oranges');
 
-/*!40000 ALTER TABLE `shoppingList` ENABLE KEYS */;
+/*!40000 ALTER TABLE `shopping_list` ENABLE KEYS */;
 UNLOCK TABLES;
 
 
