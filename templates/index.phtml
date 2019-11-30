@@ -13,12 +13,12 @@
         <h1>Mayden Shopping List</h1>
     </header>
     <div class="addItemFormContainer">
-        <form id="addItem" method="post">
+        <form id="addItem" method="post" action="/item">
             <input id="userInput" name="item" type="text" placeholder="add new item" maxlength="50" minlength="1">
             <input type="submit" value="Add item">
             <input type="hidden" name="item" value="1">
         </form>
-        <p id="errorMessage" class="hidden">Item added must not be blank or greater than 50 characters long</p>
+        <p id="errorMessage" <?php echo ' class="visible">' . $errorMsg; ?></p>
     </div>
     <section id="shoppingList">
         <ul id="listItems">

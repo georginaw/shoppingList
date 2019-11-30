@@ -30,8 +30,13 @@ class ShoppingListController
      */
     public function __invoke(Request $request, Response $response, array $args)
     {
+        $msg = '';
+        if ($request->getQueryParam('error') == 1) {
+            $msg = 'There was a problem with the item you entered so it was not added to the database. Please ensure the item is not more than 50 characters long.';
+        }
         $shoppingListItems = $this->model->getAllShoppingListItems();
         $args['shoppingListItems'] = $shoppingListItems;
+        $args['errorMsg'] = $msg;
         return $this->view->render($response, 'index.phtml', $args);
     }
 }
