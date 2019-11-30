@@ -1,14 +1,14 @@
 {
     "name": "slim/slim-skeleton",
-    "description": "A Slim Framework skeleton application for rapid development",
+    "description": "A shopping list app",
     "keywords": ["microframework", "rest", "router", "psr7"],
-    "homepage": "http://github.com/slimphp/Slim-Skeleton",
+    "homepage": "https://github.com/georginaw/shoppingList",
     "license": "MIT",
     "authors": [
         {
-            "name": "Josh Lockhart",
-            "email": "info@joshlockhart.com",
-            "homepage": "http://www.joshlockhart.com/"
+            "name": "Georgina Watson",
+            "email": "gwatson.developer@gmail.com",
+            "homepage": "https://georginaw.github.io/"
         }
     ],
     "require": {
@@ -27,7 +27,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Example\\": "src/classes/"
+            "ShoppingList\\": "src/classes/"
         }
     },
     "config": {
