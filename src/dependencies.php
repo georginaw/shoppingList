@@ -26,4 +26,6 @@ return function (App $app) {
         return $db;
     };
 
+    $container['ShoppingListModel'] = new \ShoppingList\Factories\ShoppingListModelFactory();
+
 };
