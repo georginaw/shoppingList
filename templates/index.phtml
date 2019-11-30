@@ -4,20 +4,22 @@
     <meta charset="utf-8"/>
     <title>Shopping List</title>
     <link href="//fonts.googleapis.com/css?family=Lato:300" rel="stylesheet" type="text/css">
-    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="./css/style.css" rel="stylesheet" type="text/css">
+    <script defer src="/js/script.js"></script>
 </head>
 <body>
 <main>
     <header>
         <h1>Mayden Shopping List</h1>
     </header>
-    <section id="addItem">
-        <form>
-            <input type="text" placeholder="add new item" maxlength="50" minlength="1">
+    <div class="addItemFormContainer">
+        <form id="addItem" method="post">
+            <input id="userInput" name="item" type="text" placeholder="add new item" maxlength="50" minlength="1">
             <input type="submit" value="Add item">
             <input type="hidden" name="item" value="1">
         </form>
-    </section>
+        <p id="errorMessage" class="hidden">Item added must not be blank or greater than 50 characters long</p>
+    </div>
     <section id="shoppingList">
         <ul id="listItems">
             <?php echo \ShoppingList\ViewHelpers\ShoppingListView::shoppingListView($shoppingListItems); ?>

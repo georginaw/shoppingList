@@ -24,6 +24,11 @@ h1 {
     margin-bottom: 0;
 }
 
+.addItemFormContainer {
+    width: 50%;
+    margin: 0 auto;
+}
+
 #shoppingList {
     width: 40%;
     margin: 0 auto;
@@ -31,4 +36,17 @@ h1 {
 
 ul {
     text-align: left;
+}
+
+#errorMessage {
+    font-size: 1rem;
+    color: #3b0053;
+}
+
+#errorMessage.hidden {
+    display: none;
+}
+
+#errorMessage.visible {
+    margin: 0;
 }
