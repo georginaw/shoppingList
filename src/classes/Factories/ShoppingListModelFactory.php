@@ -3,7 +3,7 @@
 
 namespace ShoppingList\Factories;
 
-use Psr\Container\ContainerInterface;
+use Interop\Container\ContainerInterface;
 use ShoppingList\Models\ShoppingListModel;
 
 class ShoppingListModelFactory

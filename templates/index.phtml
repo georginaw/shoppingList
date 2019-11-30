@@ -11,9 +11,9 @@
     <header>
         <h1>Mayden Shopping List</h1>
     </header>
-    <section id="shoppingListItems">
-        <ul>
-            <li></li>
+    <section id="shoppingList">
+        <ul id="listItems">
+            <?php echo \ShoppingList\ViewHelpers\ShoppingListView::shoppingListView($shoppingListItems); ?>
         </ul>
     </section>
 </main>

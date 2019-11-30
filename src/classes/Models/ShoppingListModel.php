@@ -20,12 +20,11 @@ class ShoppingListModel
     /**
      * Connects to the shopping list database and retrieves all items in the shopping list table
      *
-     * @return object containing array of all the items
+     * @return object containing array of all the items and their ids
      */
     public function getAllShoppingListItems() {
-        $query = $this->db('SELECT `item` FROM `shoppingList`;');
-        $shoppingListItems = $query->fetchAll();
-        return $shoppingListItems;
+        $query = $this->db->query('SELECT `item`, `id` FROM `shopping_list`;');
+        return $query->fetchAll();
     }
 
 }
