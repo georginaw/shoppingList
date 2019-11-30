@@ -28,4 +28,5 @@ return function (App $app) {
 
     $container['ShoppingListModel'] = new \ShoppingList\Factories\ShoppingListModelFactory();
 
+    $container['ShoppingListController'] = new \ShoppingList\Factories\ShoppingListControllerFactory();
 };
