@@ -11,6 +11,13 @@
     <header>
         <h1>Mayden Shopping List</h1>
     </header>
+    <section id="addItem">
+        <form>
+            <input type="text" placeholder="add new item" maxlength="50" minlength="1">
+            <input type="submit" value="Add item">
+            <input type="hidden" name="item" value="1">
+        </form>
+    </section>
     <section id="shoppingList">
         <ul id="listItems">
             <?php echo \ShoppingList\ViewHelpers\ShoppingListView::shoppingListView($shoppingListItems); ?>
