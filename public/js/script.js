@@ -17,9 +17,9 @@ newItem.addEventListener('keyup', function() {
 
 
 
-document.querySelector('#addItem').addEventListener('submit', function(e) {
-    e.preventDefault()
+addItemForm.addEventListener('submit', function(e) {
     if (newItem.value.length < 1 || newItem.value.length > 50) {
+        e.preventDefault()
         if (!window.location.href.includes('?error=1')) {
             window.location.href += '?error=1'
         }

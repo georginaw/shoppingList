@@ -27,4 +27,9 @@ class ShoppingListModel
         return $query->fetchAll();
     }
 
+    public function addToShoppingList(string $item) {
+        $query = $this->db->prepare('INSERT INTO `shopping_list` (`item`) VALUES (?);');
+        return $query->execute([$item]);
+    }
+
 }
