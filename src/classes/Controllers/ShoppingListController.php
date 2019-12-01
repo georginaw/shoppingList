@@ -3,6 +3,7 @@
 
 namespace ShoppingList\Controllers;
 
+use phpDocumentor\Reflection\Types\Boolean;
 use Slim\Http\Request;
 use Slim\Http\Response;
 
