@@ -38,15 +38,9 @@ ul {
     text-align: left;
 }
 
-#errorMessage {
+.errorText {
     font-size: 1rem;
     color: #3b0053;
 }
 
-#errorMessage.hidden {
-    display: none;
-}
 
-#errorMessage.visible {
-    margin: 0;
-}

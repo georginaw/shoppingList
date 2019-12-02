@@ -6,6 +6,7 @@ namespace ShoppingList\Controllers;
 use phpDocumentor\Reflection\Types\Boolean;
 use Slim\Http\Request;
 use Slim\Http\Response;
+use Slim\Views\PhpRenderer;
 
 class ShoppingListController
 {
@@ -33,7 +34,7 @@ class ShoppingListController
     {
         $msg = '';
         if ($request->getQueryParam('error') == 1) {
-            $msg = 'There was a problem with the item you entered so it was not added to the database. Please ensure the item is not more than 50 characters long.';
+            $msg = 'There was a problem with the item you entered so it was not added to the database. The item input text should be between 1 and 50 characters.';
         }
         $shoppingListItems = $this->model->getAllShoppingListItems();
         $args['shoppingListItems'] = $shoppingListItems;

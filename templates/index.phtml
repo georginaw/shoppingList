@@ -16,9 +16,10 @@
         <form id="addItem" method="post" action="/item">
             <input id="userInput" name="itemInput" type="text" placeholder="add new item" maxlength="50" minlength="1">
             <input type="submit" value="Add item">
-            <input type="hidden" name="item" value="1">
+            <input type="hidden" name="item">
+            <p class="errorText"><?php echo $errorMsg; ?></p>
         </form>
-        <p id="errorMessage" <?php echo ' class="visible">' . $errorMsg; ?></p>
+        <p id="errorMessage" class="errorText"></p>
     </div>
     <section id="shoppingList">
         <ul id="listItems">
