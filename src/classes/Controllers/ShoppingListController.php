@@ -3,7 +3,7 @@
 
 namespace ShoppingList\Controllers;
 
-use phpDocumentor\Reflection\Types\Boolean;
+use ShoppingList\Models\ShoppingListModel;
 use Slim\Http\Request;
 use Slim\Http\Response;
 use Slim\Views\PhpRenderer;
@@ -18,7 +18,7 @@ class ShoppingListController
      * @param $model
      * @param $view
      */
-    public function __construct($model, $view)
+    public function __construct(ShoppingListModel $model, PhpRenderer $view)
     {
         $this->model = $model;
         $this->view = $view;

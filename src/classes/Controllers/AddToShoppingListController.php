@@ -4,19 +4,23 @@
 namespace ShoppingList\Controllers;
 
 
+use ShoppingList\Models\ShoppingListModel;
 use ShoppingList\Validators\AddToShoppingListValidator;
 use Slim\Http\Request;
 use Slim\Http\Response;
 
 class AddToShoppingListController
 {
+    /**
+     * @var ShoppingListModel
+     */
     private $model;
 
     /**
      * AddToShoppingListController constructor.
      * @param $model
      */
-    public function __construct($model)
+    public function __construct(ShoppingListModel $model)
     {
         $this->model = $model;
     }
