@@ -4,8 +4,10 @@ const errorMessage = document.querySelector('#errorMessage')
 
 
 newItem.addEventListener('keyup', function() {
-    if (newItem.value.length === 0 || newItem.value.length > 50) {
-        errorMessage.innerText = 'Item added box must not be blank or greater than 50 characters long</p>';
+    if (newItem.value.length === 0) {
+        errorMessage.innerText = 'The \'add new item\' box must not be blank';
+    } else if (newItem.value.length > 50) {
+        errorMessage.innerText = 'The item input should not be greater than 50 characters in length';
     } else {
         errorMessage.innerText = '';
     }
@@ -13,7 +15,7 @@ newItem.addEventListener('keyup', function() {
 
 
 addItemForm.addEventListener('submit', function(e) {
-    if (newItem.value.length < 1 || newItem.value.length > 50) {
+    if (newItem.value.length === '' || newItem.value.length > 50) {
         e.preventDefault()
         if (!window.location.href.includes('?error=1')) {
             window.location.href += '?error=1'
