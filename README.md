@@ -1,5 +1,7 @@
 # Slim Framework 3 Mayden Shopping List Application
 
+The app uses localhost:8080
+
 ## Install the Application
 
 Create a new directory with your project name, e.g:
@@ -25,4 +27,3 @@ Run this command in the application directory to run the test suite
 ```
 composer test
 ```
-
